@@ -216,7 +216,7 @@
   100% {  opacity: 1; transform: translateY(0);}
 }
 
-.main-visual .img.n1{animation: shakeX;animation-duration: 1s;animation-delay: 0.3s; opacity: 0;animation-fill-mode: forwards;}
+.main-visual .img.n1{animation: shakeX;animation-duration: 0.8s;animation-delay: 0.3s; opacity: 0;animation-fill-mode: forwards;}
 /* @keyframes shakeX {
   0% { -webkit-transform: rotate(0deg);transform: rotate(0deg); top:-130px;opacity: 0;}
   25% { -webkit-transform: rotate(5deg);transform: rotate(5deg); }
@@ -225,7 +225,7 @@
   100% { -webkit-transform: rotate(0deg);transform: rotate(0deg); top:-60px;opacity: 1;}
 } */
 @keyframes shakeX {
-  0% { transform: rotate(-5deg) translateY(-100px);opacity: 0;}
+  0% { transform: rotate(0) translateY(-100px);opacity: 0;}
   100% {transform: rotate(15deg) translateY(0);opacity: 1;}
 }
 
@@ -240,7 +240,7 @@
     transform: translateY(0);
   }
 }
-.main-visual .img.n4{animation-name: heartBeat;animation-duration: 1s;animation-timing-function: ease-in-out;animation-delay: 1.3s; animation-fill-mode: forwards;opacity: 0;}
+.main-visual .img.n4{animation-name: heartBeat;animation-duration: 0.8s;animation-timing-function: ease-in-out;animation-delay: 1.3s; animation-fill-mode: forwards;opacity: 0;}
 @keyframes heartBeat {
   0% {
     -webkit-transform: scale(1);
