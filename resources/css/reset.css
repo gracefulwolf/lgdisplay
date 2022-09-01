@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-@font-face {
+/* @font-face {
     font-family: 'SpoqaHanSansNeo';
     font-style: normal;
     font-weight: 400;
@@ -27,6 +27,13 @@
     src: url('../fonts/SpoqaHanSansNeo-Bold.woff') format('woff'),
 	    url('../fonts/SpoqaHanSansNeo-Bold.otf') format(‘opentype’),
 	    url('../fonts/SpoqaHanSansNeo-Bold.ttf') format('truetype');
+} */
+
+@font-face {
+    font-family: 'NanumSquareRound';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumSquareRound.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 /*Reset*/
 *, *:after, *:before{margin:0; padding:0; box-sizing: border-box; word-break:keep-all;}
@@ -35,7 +42,7 @@ dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tf
 article, aside, canvas, details, embed, figure, figcaption, footer, header, menu, section, summary, time,  audio, video {  
 	font-weight: 500;
     font-size: 1.4rem;
-    font-family: 'SpoqaHanSansNeo', 'Roboto', 'Noto Sans KR', sans-serif;
+    font-family: 'NanumSquareRound', 'Roboto', 'Noto Sans KR', sans-serif;
 }
 body,html{
     font-size:62.5%;

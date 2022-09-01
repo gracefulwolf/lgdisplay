@@ -35,7 +35,7 @@
 	  top: 100%;
 	  line-height: 1em;
 	  right: 0;
-      top:8px;
+      top:15px;
 	  -webkit-transform: translate(-50%, 0);
         transform: translate(-50%, 0);
 	  text-align: right;
@@ -240,6 +240,7 @@
 	  z-index: 30;
 	  left: 0;
 	  right: 0;
+	  display: none;
 	}
 	.flipper-dark {
 	  color: #fff;
