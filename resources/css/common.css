@@ -105,7 +105,7 @@
 .dim{position:fixed;width:100%;height:100%;background: rgba(0,0,0,0.6);z-index: 100;opacity:0;transition: 0.3s;}
 .dim.on{opacity: 1;}
 .modal{display:none; position:fixed;top:50%;left:50%;transform: translate(-50%, -50%);width:720px;height:500px;border-radius: 8px;padding:0 27px 46px;background:#fff; transition: 0.3s;z-index: 101;}
-.modal.on{display:block;animation: showModal 0.5s forwards;}
+.modal.on{display:block;}
 .modal .modal-header{display:flex;align-items: center; height:55px;}
 .modal .modal-header h2{font-size:20px;line-height:20px;}
 .modal .modal-header .btn-close{margin-left:auto;width:24px;height:24px;background:url(../images/btn_close.png) 50% 50% no-repeat;background-size:24px;}
@@ -116,6 +116,17 @@
 .modal .modal-cont .scorll-wrap::-webkit-scrollbar {width: 12px;border-radius:4px;}
 .modal .modal-cont .scorll-wrap::-webkit-scrollbar-thumb {border-radius: 6px;background-clip: padding-box;border: 4px solid #efefef;background:#c3c3c3}
 .modal .modal-cont .scorll-wrap::-webkit-scrollbar-track {background-color: transparent; border-radius: 10px;}
+
+
+.share-box{display:none;}
+.share-box .btn{width:50px;height:50px;margin-left:17px;background:url(../images/icon_kakao.png) 0 0 no-repeat;background-size:100%; border-radius: 50%;overflow: hidden;}
+.share-box .btn:first-child{margin-left:0;}
+.share-box .btn.facebook{background-image: url(../images/icon_facebook.png);}
+.share-box .btn.kakao{background-image: url(../images/icon_kakao.png);}
+.share-box .btn.url{background-image: url(../images/icon_url.png);}
+
+.share-wrap.on .btn-share{display:none;}
+.share-wrap.on .share-box{display:flex;justify-content: center;margin:18px 0 0 0;}
 
 @media screen and (max-width: 850px) {
   .container{padding-bottom:130px;}
@@ -206,7 +217,14 @@
   .main-visual .img.n4{top: 45%;}
   .main-visual .img.n5{top: 41%;}
 }
-
+@keyframes fadeIn {
+  0% {opacity: 0;   }
+  100% {  opacity: 1; }
+}
+@keyframes fadeOut {
+  0% {opacity: 1;   }
+  100% {  opacity: 0; }
+}
 
 .img-title{animation:showUp;animation-duration: 0.9s; }
 @keyframes showModal {

@@ -7,6 +7,7 @@ $(function(){
     lgDisplay.navShow();
     lgDisplay.modal();
     lgDisplay.modalClose();
+    lgDisplay.btnShare();
 })
 
 
@@ -107,6 +108,12 @@ lgDisplay = {
                 $('.dim').remove();
             })
             
+        })
+    },
+
+    btnShare : function(){
+        $(document).on('click', '.btn-share', function(){
+            $(this).parent('.share-wrap').addClass('on');
         })
     }
 }

@@ -791,7 +791,14 @@
 			</section>
 			<div class="btn-wrap">
 				<a href="#" class="btn-application">지원하기</a>
-				<button type="button" class="btn-share"><span>공유하기</span></button>
+				<div class="share-wrap">
+					<button type="button" class="btn-share"><span>공유하기</span></button>
+					<div class="share-box">
+						<a href="javascript:shareFacebook();" class="btn facebook" id="btnFacebook"></a>
+						<a href="javascript:shareKakao();" class="btn kakao" id="btnKakao"></a>
+						<a href="javascript:clip();" class="btn url" id="shareClip"></a>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -835,5 +842,49 @@
 			$('#myFlipper').flipper('init');
 		}, 500);	
 	})
+</script>
+
+
+<script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
+
+<script>
+	function shareKakao() {
+		// 사용할 앱의 JavaScript 키 설정
+		Kakao.init('670f1b33c4230c1819c6d284dbc6b3d8');
+		
+		
+		// 카카오링크 버튼 생성
+		Kakao.Link.createDefaultButton({
+		container: '#btnKakao', // 카카오공유버튼ID
+		objectType: 'feed',
+		content: {
+			title: "2022 LG디스플레이 학/석/박사 LGenius 산학장학생 선발", // 보여질 제목
+	      	description: "2022.09.05 (월) ~ 09.25 (일) 23:00", // 보여질 설명
+			imageUrl: "https://www.lgd-lgenius.com/", // 콘텐츠 URL
+			link: {
+				mobileWebUrl: "https://www.lgd-lgenius.com/",
+				webUrl: "https://www.lgd-lgenius.com/"
+			}
+		}
+		});
+	}		
+
+	function shareFacebook() {
+		var sendUrl = "https://www.lgd-lgenius.com/"; // 전달할 URL
+		window.open("http://www.facebook.com/sharer/sharer.php?u=" + sendUrl);
+	}
+
+	function clip(){
+	
+		var url = '';
+		var textarea = document.createElement("textarea");
+		document.body.appendChild(textarea);
+		url = window.document.location.href;
+		textarea.value = url;
+		textarea.select();
+		document.execCommand("copy");
+		document.body.removeChild(textarea);
+		alert("URL이 복사되었습니다.")
+	}		
 </script>
 </html>
