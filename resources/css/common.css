@@ -225,11 +225,8 @@
   100% { -webkit-transform: rotate(0deg);transform: rotate(0deg); top:-60px;opacity: 1;}
 } */
 @keyframes shakeX {
-  0% { -webkit-transform: rotate(0deg) translateY(-100px);transform: rotate(0deg) translateY(-100px);opacity: 0;}
-  25% { -webkit-transform: rotate(5deg);transform: rotate(5deg); }
-  50% { -webkit-transform: rotate(0deg);transform: rotate(0deg); }
-  75% { -webkit-transform: rotate(-5deg);transform: rotate(-5deg); }
-  100% { -webkit-transform: rotate(0deg);transform: rotate(0deg);  -webkit-transform: rotate(0deg) translateY(0);transform: rotate(0deg) translateY(0);opacity: 1;}
+  0% { transform: rotate(-5deg) translateY(-100px);opacity: 0;}
+  100% {transform: rotate(15deg) translateY(0);opacity: 1;}
 }
 
 .main-visual .img.n2{animation-name: show;animation-duration: 0.5s;animation-delay: 0.8s; animation-fill-mode: forwards;opacity: 0;}
