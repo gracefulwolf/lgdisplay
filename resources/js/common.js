@@ -5,6 +5,8 @@ $(function(){
     lgDisplay.acco();
     lgDisplay.scrollMove();
     lgDisplay.navShow();
+    lgDisplay.modal();
+    lgDisplay.modalClose();
 })
 
 
@@ -67,6 +69,44 @@ lgDisplay = {
                 $(this).addClass('on');
                 $('.top-nav nav').addClass('on');
             }
+        })
+    },
+
+    modal: function (){
+        $(document).on('click', '[data-modal]', function(e){
+            e.preventDefault();
+            var winW = $(window).width();
+            var modal = $(this).data('modal');
+            var dim = '<div class="dim"></div>'
+            console.log(winW)
+            $('body').prepend(dim);
+            if (winW < 750) {
+                $('html').css('overflow-y', 'hidden')
+            }
+            setTimeout(function(){
+                $('#'+modal).addClass('on');
+                $('.dim').addClass('on');
+
+            },100);
+        })
+    },
+    modalClose : function(modal){
+        $(document).on('click', '.modal .btn-close', function(){
+            var $modal = $(this).parents('.modal');
+
+            $modal.stop().animate({
+                opacity:0
+            },200, function(){
+                $modal.removeClass('on');
+                $modal.removeAttr('style');
+                $('html').css('overflow-y', '')
+            });
+            $('.dim').stop().animate({
+                opacity:0
+            },200, function(){
+                $('.dim').remove();
+            })
+            
         })
     }
 }
